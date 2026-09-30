@@ -1,0 +1,12 @@
+class Temperature:
+    def __init__(self, celsius):
+        self._celsius = celsius
+
+    @property
+    def fahrenheit(self):
+        return self._celsius * 9 / 5 + 32
+
+@register
+def demo_15():
+    t = Temperature(25)
+    print("15: 25C in Fahrenheit =", t.fahrenheit)
